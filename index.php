@@ -31,7 +31,7 @@ require_once 'db.php';
             <div class="card">
                 <div class="top-card">
                     <span><?= $singleProduct->name?></span>
-                    <span><?= $singleProduct->category?></span>
+                    <span><i class="fa-solid <?php echo($singleProduct->category == 'Cane' ? 'fa-dog' : 'fa-cat') ?>"></i></span>
                 </div>
                 <div class="img-container">
                     <img src="<?php echo $singleProduct->imageUrl?>" alt="img">

@@ -3,3 +3,60 @@
     padding: 0;
     box-sizing: 0;
 }
+
+h1{
+    margin-bottom: 1em;
+}
+
+.container{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.5em 0;
+}
+
+.card-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 30px 30px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: calc(100% / 4 - 30px / 4 * 3);
+    padding: 1em;
+    border: 1px solid black;
+    
+}
+
+.top-card{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.img-container{
+    width: 250px;
+    height: 200px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p{
+    text-align: start;
+}
+
+.price{
+    width: 100%;
+    text-align: end;
+}

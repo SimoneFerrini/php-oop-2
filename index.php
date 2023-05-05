@@ -54,6 +54,17 @@ require_once 'db.php';
                         default: echo '-';
                     }
                 ?></span>
+                <span><?php 
+                    switch(get_class($singleProduct)){
+                        case 'Cuccia': 
+                            echo 'Peso: ' . $singleProduct->getWeight() . 'g';
+                            break;
+                        case 'Cibo':
+                            echo 'Peso: ' . $singleProduct->getWeight() . 'g';
+                            break;
+                        default: echo '-';
+                    }
+                ?></span>
             </div>
             <?php } ?>
         </div>

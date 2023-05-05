@@ -11,6 +11,12 @@
     $prodotto6 = new Cibo('pro_cibo_gat1', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum sunt odio distinctio totam! Sunt cumque ut?', 12, $categories[1],'./img/cibo.png', 'Dicembre 2023');
     $prodotto7 = new Gioco('pro_gioco_gat', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum sunt odio distinctio totam! Sunt cumque ut?', 20, $categories[1],'./img/giochi.png','God Cat');
 
+    $prodotto1->setWeight(250);
+    $prodotto2->setWeight(1500);
+    $prodotto4->setWeight(150);
+    $prodotto5->setWeight(3000);
+    $prodotto6->setWeight(70);
+
     $products = [
         $prodotto1,
         $prodotto2,

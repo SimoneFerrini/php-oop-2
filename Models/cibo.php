@@ -1,6 +1,6 @@
 <?php 
     class Cibo extends Product {
-        public $dataScadenza;
+        protected $dataScadenza;
 
         function __construct(string $name, string $description, int $price, string $category, string $imageUrl, string $dataScadenza){
             parent::__construct($name, $description, $price, $category, $imageUrl);
@@ -9,8 +9,8 @@
 
         }
 
-        public function getLastDescription($product){
-            return 'Scadenza: ' . $product->dataScadenza;
+        public function getScadenza(){
+            return $this->dataScadenza;
          }
     }
 

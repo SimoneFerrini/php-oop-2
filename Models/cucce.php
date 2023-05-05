@@ -1,6 +1,6 @@
 <?php 
     class Cuccia extends Product {
-        public $dimensioni;
+        protected $dimensioni;
 
         function __construct(string $name, string $description, int $price, string $category, string $imageUrl, string $dimensioni){
             parent::__construct($name, $description, $price, $category, $imageUrl);
@@ -9,8 +9,8 @@
 
         }
 
-        public function getLastDescription($product){
-           return 'Dimensioni:' . $product->dimensioni . ' cm';
+        public function getDimensioni(){
+           return $this->dimensioni;
         }
     }
 

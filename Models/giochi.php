@@ -1,6 +1,6 @@
 <?php 
     class Gioco extends Product {
-        public $marca;
+        protected $marca;
 
         function __construct(string $name, string $description, int $price, string $category, string $imageUrl, string $marca){
             parent::__construct($name, $description, $price, $category, $imageUrl);
@@ -9,8 +9,8 @@
 
         }
 
-        public function getLastDescription($product){
-            return 'Marca: ' . $product->marca;
+        public function getMarca(){
+            return $this->marca;
          }
     }
 

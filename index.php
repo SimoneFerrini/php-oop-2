@@ -30,17 +30,30 @@ require_once 'db.php';
             ?>
             <div class="card">
                 <div class="top-card">
-                    <span><?= $singleProduct->name?></span>
-                    <span><i class="fa-solid <?php echo($singleProduct->category == 'Cane' ? 'fa-dog' : 'fa-cat') ?>"></i></span>
+                    <span><?= $singleProduct->getName()?></span>
+                    <span><i class="fa-solid <?php echo($singleProduct->getCategory() == 'Cane' ? 'fa-dog' : 'fa-cat') ?>"></i></span>
                 </div>
                 <div class="img-container">
-                    <img src="<?php echo $singleProduct->imageUrl?>" alt="img">
+                    <img class="my-img" src="<?php echo $singleProduct->getImage()?>" alt="img">
                 </div>
-                <p><?= $singleProduct->description?></p>
+                <p><?= $singleProduct->getDescription()?></p>
                 <div class="price">
-                    Prezzo: <?= $singleProduct->price?> &euro;
+                    Prezzo: <?= $singleProduct->getPrice()?> &euro;
                 </div>
-                <span><?php echo $singleProduct->getLastDescription($singleProduct)?></span>
+                <span><?php 
+                    switch(get_class($singleProduct)){
+                        case 'Cuccia': 
+                            echo 'Dimensioni: ' . $singleProduct->getDimensioni();
+                            break;
+                        case 'Gioco': 
+                            echo 'Marca: '. $singleProduct->getMarca();
+                            break;
+                        case 'Cibo':
+                            echo 'Scadenza: ' . $singleProduct->getScadenza();
+                            break;
+                        default: echo '-';
+                    }
+                ?></span>
             </div>
             <?php } ?>
         </div>
